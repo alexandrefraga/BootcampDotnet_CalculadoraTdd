@@ -9,7 +9,7 @@ namespace Calculadora
     {
         public int Soma(int a, int b)
         {
-            return 0;
+            return a + b;
         }
 
         public int Subtrair(int a, int b)
