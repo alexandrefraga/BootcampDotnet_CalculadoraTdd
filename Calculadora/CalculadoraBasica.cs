@@ -14,7 +14,7 @@ namespace Calculadora
 
         public int Subtrair(int a, int b)
         {
-            return 0;
+            return a - b;
         }
 
         public int Multiplicar(int a, int b)
