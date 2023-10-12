@@ -49,4 +49,16 @@ public class CalculadoraTest
 
         Assert.Throws<DivideByZeroException>(() => calc.Dividir(3, 0));
     }
+
+    [Theory]
+    [InlineData(8, 4, 2)]
+    [InlineData(15, 3, 5)]
+    public void DeveRetornarADivisaoCorreta(int n1, int n2, int resultadoEsperado)
+    {
+        CalculadoraBasica calc = new CalculadoraBasica();
+
+        var resultado = calc.Dividir(n1, n2);
+
+        Assert.Equal(resultadoEsperado, resultado);
+    }
 }
