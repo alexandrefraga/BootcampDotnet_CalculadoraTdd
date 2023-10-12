@@ -61,4 +61,13 @@ public class CalculadoraTest
 
         Assert.Equal(resultadoEsperado, resultado);
     }
+
+    [Fact]
+    public void DeveRetornarListaNoHistorico()
+    {
+        CalculadoraBasica calc = new CalculadoraBasica();
+        var defaultList = calc.Historico();
+        Assert.IsType<List<int>>(defaultList);
+        Assert.True(defaultList.Count < 4);
+    }
 }
