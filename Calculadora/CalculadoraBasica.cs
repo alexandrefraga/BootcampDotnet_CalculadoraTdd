@@ -24,7 +24,7 @@ namespace Calculadora
 
         public int Dividir(int a, int b)
         {
-            return 0;
+            throw new DivideByZeroException();
         }
 
         public List<int> Historico()
