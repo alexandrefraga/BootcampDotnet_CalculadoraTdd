@@ -19,7 +19,7 @@ namespace Calculadora
 
         public int Multiplicar(int a, int b)
         {
-            return 0;
+            return a * b;
         }
 
         public int Dividir(int a, int b)
