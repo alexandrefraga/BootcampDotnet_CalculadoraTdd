@@ -27,9 +27,9 @@ namespace Calculadora
             return a / b;
         }
 
-        public List<int> Historico()
+        public List<string> Historico()
         {
-            return new List<int>();
+            return new List<string>();
         }
     }
 }

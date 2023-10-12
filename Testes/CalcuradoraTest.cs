@@ -67,7 +67,7 @@ public class CalculadoraTest
     {
         CalculadoraBasica calc = new CalculadoraBasica();
         var defaultList = calc.Historico();
-        Assert.IsType<List<int>>(defaultList);
+        Assert.IsType<List<string>>(defaultList);
         Assert.True(defaultList.Count < 4);
     }
 }
