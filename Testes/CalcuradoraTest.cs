@@ -41,4 +41,12 @@ public class CalculadoraTest
 
         Assert.Equal(resultadoEsperado, resultado);
     }
+
+    [Fact]
+    public void DeveLancarErroNaDivisaoPorZero()
+    {
+        CalculadoraBasica calc = new CalculadoraBasica();
+
+        Assert.Throws<DivideByZeroException>(() => calc.Dividir(3, 0));
+    }
 }
