@@ -68,6 +68,23 @@ public class CalculadoraTest
         CalculadoraBasica calc = new CalculadoraBasica();
         var defaultList = calc.Historico();
         Assert.IsType<List<string>>(defaultList);
-        Assert.True(defaultList.Count < 4);
+        Assert.True(defaultList.Count == 0);
+        Assert.Empty(defaultList);
+    }
+
+    [Fact]
+    public void DeveRetornarHistoricoDeAte3Operacoes()
+    {
+        CalculadoraBasica calc = new CalculadoraBasica();
+        calc.Soma(1, 8);
+        var h1 = calc.Historico();
+        Assert.True(h1.Count == 1);
+
+        calc.Multiplicar(3, 7);
+        calc.Soma(5, 4);
+        Assert.True(h1.Count == 3);
+
+        calc.Subtrair(9, 2);
+        Assert.True(h1.Count == 3);
     }
 }
