@@ -29,4 +29,16 @@ public class CalculadoraTest
 
         Assert.Equal(resultadoEsperado, resultado);
     }
+
+    [Theory]
+    [InlineData(8, 3, 24)]
+    [InlineData(15, 4, 60)]
+    public void DeveRetornarAMultiplicacaoCorreta(int n1, int n2, int resultadoEsperado)
+    {
+        CalculadoraBasica calc = new CalculadoraBasica();
+
+        var resultado = calc.Multiplicar(n1, n2);
+
+        Assert.Equal(resultadoEsperado, resultado);
+    }
 }
